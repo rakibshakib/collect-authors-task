@@ -1,0 +1,19 @@
+.menuBar {
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.authors,
+.favAuthor {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 20px;
+    display: block;
+    background: rgb(204, 204, 204);
+    padding: 5px 10px;
+}
+.link {
+    text-decoration: none;
+}

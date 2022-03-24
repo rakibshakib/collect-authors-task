@@ -1,0 +1,10 @@
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 1px solid blue;
+}
+.menu-bar {
+    border-right: 1px solid black;
+}
