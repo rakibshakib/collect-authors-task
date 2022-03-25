@@ -5,7 +5,6 @@ import ListItemComponent from '../common/ListItemComponent';
 
 const FavoriteAuthor = () => {
     const { favoriteAuthors } = useContext(AuthorContext);
-    const isAdd = false;
 
     return (
         <div className={favAuthorStyle.fabAuthor}>
@@ -23,7 +22,6 @@ const FavoriteAuthor = () => {
                     {favoriteAuthors.map((author) => (
                         <ListItemComponent
                             key={author._id}
-                            isAdd={isAdd}
                             author={author}
                         />
                     ))}

@@ -1,39 +1,45 @@
 .listContainer {
-    padding: 10px;
-    width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
 }
 .author_name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
 }
 .author_bio {
-    font-size: 13px;
-    font-weight: 400;
-    margin: 10px 0;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 10px 0;
 }
 .author_link {
-    text-decoration: none;
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
+}
+.author_link:visited {
+  color: rgba(31, 31, 255, 0.746);
 }
 button {
-    padding: 3px 6px;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
+  padding: 3px 6px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
 }
 .addBtn {
-    background: rgba(0, 128, 0, 0.692);
-    color: white;
+  background: rgba(0, 128, 0, 0.692);
+  color: white;
 }
 .removeBtn {
-    background: rgba(31, 31, 255, 0.746);
-    color: white;
-    /* margin-left: 5px; */
+  background: rgba(31, 31, 255, 0.746);
+  color: white;
+  /* margin-left: 5px; */
 }
 .addBtn:active,
 .removeBtn:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }

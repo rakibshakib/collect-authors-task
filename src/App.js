@@ -1,10 +1,16 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './asset/main.css';
-import AuthorsComponent from './components/AuthorContainer/AuthorsComponent';
-import FavoriteAuthor from './components/FavoriteAuthor/FavoriteAuthor';
 import Menu from './components/Menu/Menu';
 import AuthorData from './context/AuthorData';
 import ContextProvider from './context/State';
+
+const AuthorsComponent = lazy(() =>
+    import('./components/AuthorContainer/AuthorsComponent')
+);
+const FavoriteAuthor = lazy(() =>
+    import('./components/FavoriteAuthor/FavoriteAuthor')
+);
 
 function App() {
     return (
@@ -20,15 +26,21 @@ function App() {
                             <Routes>
                                 <Route
                                     path="/authors"
-                                    element={<AuthorsComponent />}
+                                    element={<Suspense fallback={<h5>Loading...</h5>}>
+                                    <AuthorsComponent />
+                                </Suspense>}
                                 />
                                 <Route
                                     path="/"
-                                    element={<AuthorsComponent />}
+                                    element={<Suspense fallback={<h5>Loading...</h5>}>
+                                    <AuthorsComponent />
+                                </Suspense>}
                                 />
                                 <Route
                                     path="/favorite-author"
-                                    element={<FavoriteAuthor />}
+                                    element={<Suspense fallback={<h5>Loading...</h5>}>
+                                    <FavoriteAuthor />
+                                </Suspense>}
                                 />
                             </Routes>
                         </div>

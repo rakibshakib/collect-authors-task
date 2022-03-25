@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import listStyle from '../../asset/ListItemComponent.module.css';
 import { AuthorContext } from '../../context/State';
 
-const ListItemComponent = ({ author, isAdd = true }) => {
-    const { addToFaborite, removeFromFaborite } = useContext(AuthorContext);
+const ListItemComponent = ({ author}) => {
+    const { addToFaborite, removeFromFaborite, favoriteAuthors } = useContext(AuthorContext);
+    const isExistinFavourite = favoriteAuthors.find(auth => auth._id === author._id);
+    
     return (
         <div className={listStyle.listContainer}>
             <div>
@@ -17,11 +19,11 @@ const ListItemComponent = ({ author, isAdd = true }) => {
                     rel="noreferrer"
                     target="_blank"
                 >
-                    author link
+                    Visit Author
                 </a>
             </div>
             <div>
-                {isAdd && (
+                {!isExistinFavourite && (
                     <button
                         className={listStyle.addBtn}
                         onClick={() => addToFaborite(author)}
@@ -29,12 +31,15 @@ const ListItemComponent = ({ author, isAdd = true }) => {
                         Add favorite
                     </button>
                 )}
-                <button
+                {
+                    isExistinFavourite && <button
                     className={listStyle.removeBtn}
                     onClick={() => removeFromFaborite(author._id)}
                 >
                     Remove favorite
                 </button>
+                }
+                
             </div>
         </div>
     );
