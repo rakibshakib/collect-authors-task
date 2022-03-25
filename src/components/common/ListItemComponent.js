@@ -8,7 +8,7 @@ const ListItemComponent = ({ author}) => {
     
     return (
         <div className={listStyle.listContainer}>
-            <div>
+            <div className={listStyle.listDetails}>
                 <h4 className={listStyle.author_name}>{author?.name}</h4>
                 <h5 className={listStyle.author_bio}>
                     <b>Biography: </b> {author?.bio}

@@ -3,18 +3,18 @@ import { useEffect, useState } from 'react';
 const useAuthorData = () => {
     const [authors, setAuthors] = useState([]);
     const [isLoading, setIsloading] = useState(true);
-    const limitAuhtor = 6;
+    const limitAuhtor = 4;
     const [skipAuthor, setSkipAuthor] = useState(0);
     const [countPage, setCountPage] = useState(1);
 
     const handlePrevoiusBtn = () => {
         if (skipAuthor !== 0 && skipAuthor > 0) {
-            setSkipAuthor((prev) => prev - 6);
+            setSkipAuthor((prev) => prev - 4);
             setCountPage((prev) => prev - 1);
         }
     };
     const handleNextBtn = () => {
-        setSkipAuthor((prev) => prev + 6);
+        setSkipAuthor((prev) => prev + 4);
         setCountPage((prev) => prev + 1);
     };
     useEffect(() => {
