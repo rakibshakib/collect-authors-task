@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './asset/main.css';
-import AuthorsComponent from './components/DisplayContainer/AuthorsComponent';
+import AuthorsComponent from './components/AuthorContainer/AuthorsComponent';
 import FavoriteAuthor from './components/FavoriteAuthor/FavoriteAuthor';
 import Menu from './components/Menu/Menu';
 import ContextProvider from './context/State';
+
 function App() {
     return (
         <ContextProvider>

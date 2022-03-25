@@ -1,17 +1,19 @@
-.author_Com_Title {
+.fabAuthor {
+    padding: 20px;
+}
+.favDontAddingTitle {
     text-align: center;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+.favAuthorTitle {
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 10px 0;
+    text-align: center;
+    padding: 5px 0;
     border-bottom: 1px solid rgb(194, 194, 194);
 }
-.loadingTitle {
-    text-align: center;
-    font-size: 1.1rem;
-    margin: 25px auto;
-    color: gray;
-}
-.authorComponent {
+.favAuthorContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;

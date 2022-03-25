@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import authorStyle from '../../asset/AuthorComponent.module.css';
-import ListItemComponent from './ListItemComponent';
+import ListItemComponent from '../common/ListItemComponent';
 
 const AuthorsComponent = () => {
     const [authors, setAuthors] = useState([]);
@@ -22,11 +22,15 @@ const AuthorsComponent = () => {
 
     return (
         <div>
-            <div>{}</div>
+            <div>
+                <h4 className={authorStyle.author_Com_Title}>Author Profile</h4>
+            </div>
             <div>
                 {isLoading ? (
                     <div>
-                        <h4>Loding data......</h4>
+                        <h4 className={authorStyle.loadingTitle}>
+                            Loding Authors Profile......
+                        </h4>
                     </div>
                 ) : (
                     <div className={authorStyle.authorComponent}>
