@@ -17,6 +17,5 @@
   padding: 10px 0;
 }
 .active {
-  background: rgba(0, 128, 0, 0.692);
-  color: #fcfcfc !important;
+  border-bottom: 5px solid rgba(31, 31, 255, 0.746);
 }

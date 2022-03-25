@@ -1,23 +1,22 @@
 .menuBar {
-    color: black !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 .authors,
 .favAuthor {
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    margin-top: 5px;
-    display: block;
-    padding: 7px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  display: block;
+  padding: 8px 10px;
 }
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 .authors:hover,
 .favAuthor:hover {
-    color: black;
+  background: rgba(31, 31, 255, 0.746);
+  color: white;
 }
