@@ -2,9 +2,6 @@ import React, { createContext, useReducer } from 'react';
 import { reducer } from './Reducer';
 
 const initialState = {
-    authors: [],
-    loading: true,
-    error: '',
     favoriteAuthors: [],
 };
 export const AuthorContext = createContext(initialState);

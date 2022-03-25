@@ -1,20 +1,5 @@
 export const reducer = (state, action) => {
     switch (action.type) {
-        // case 'FETCH_SUCCESS':
-        //     return {
-        //         ...state,
-        //         loading: false,
-        //         authors: action.payload,
-        //         error: '',
-        //     };
-        // case 'FETCH_FAILD':
-        //     return {
-        //         ...state,
-        //         loading: false,
-        //         authors: [],
-        //         error: 'Errro to Load Data from API',
-        //     };
-
         case 'ADD_TO_FAVORITE':
             const isExist = state.favoriteAuthors.find(
                 (author) => author._id === action.payload?._id

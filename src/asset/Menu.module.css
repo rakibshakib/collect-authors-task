@@ -19,6 +19,5 @@
 }
 .authors:hover,
 .favAuthor:hover {
-    background: rgba(31, 31, 255, 0.746);
-    color: white;
+    color: black;
 }

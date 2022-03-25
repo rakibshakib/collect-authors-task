@@ -5,10 +5,18 @@ import menuStyle from '../../asset/Menu.module.css';
 const Menu = () => {
     return (
         <div className={menuStyle.menuBar}>
-            <NavLink className={menuStyle.link} to="/authors">
+            <NavLink
+                className={menuStyle.link}
+                activeClassName="active"
+                to="/authors"
+            >
                 <span className={menuStyle.authors}>Authors</span>
             </NavLink>
-            <NavLink className={menuStyle.link} to="/favorite-author">
+            <NavLink
+                className={menuStyle.link}
+                activeClassName="active"
+                to="/favorite-author"
+            >
                 <span className={menuStyle.favAuthor}>Favorite Authors</span>
             </NavLink>
         </div>
