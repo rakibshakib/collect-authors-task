@@ -33,3 +33,7 @@ button {
     color: white;
     /* margin-left: 5px; */
 }
+.addBtn:active,
+.removeBtn:active {
+    transform: translateY(2px);
+}

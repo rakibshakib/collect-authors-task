@@ -11,7 +11,7 @@ function App() {
         <ContextProvider>
             <AuthorData>
                 <BrowserRouter>
-                    <h4>Authors</h4>
+                    <h4 className="title">Collects Authors</h4>
                     <div className="container">
                         <div className="menu-bar">
                             <Menu />
