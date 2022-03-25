@@ -6,7 +6,7 @@ import ListItemComponent from '../common/ListItemComponent';
 const FavoriteAuthor = () => {
     const { favoriteAuthors } = useContext(AuthorContext);
     const isAdd = false;
-    console.log(favoriteAuthors);
+
     return (
         <div className={favAuthorStyle.fabAuthor}>
             <h4 className={favAuthorStyle.favAuthorTitle}>
