@@ -7,14 +7,12 @@ const Menu = () => {
         <div className={menuStyle.menuBar}>
             <NavLink
                 className={menuStyle.link}
-                activeClassName="active"
                 to="/authors"
             >
                 <span className={menuStyle.authors}>Authors</span>
             </NavLink>
             <NavLink
                 className={menuStyle.link}
-                activeClassName="active"
                 to="/favorite-author"
             >
                 <span className={menuStyle.favAuthor}>Favorite Authors</span>
