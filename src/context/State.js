@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useEffect, useReducer } from 'react';
 import { reducer } from './Reducer';
 
 const initialState = {
@@ -7,9 +7,18 @@ const initialState = {
 export const AuthorContext = createContext(initialState);
 
 const ContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState, () => {
+        const localData = window.localStorage.getItem('favoriteAuthors');
+        const favAuthor = JSON.parse(localData);
+        return {
+            favoriteAuthors: favAuthor ? favAuthor.favoriteAuthors : [],
+        };
+    });
 
-    // fetching data from api
+    // set favorite data to loaclStorage 
+    useEffect(()=> {
+        window.localStorage.setItem('favoriteAuthors', JSON.stringify(state));
+    }, [state])
 
     const addToFaborite = (author) => {
         dispatch({
