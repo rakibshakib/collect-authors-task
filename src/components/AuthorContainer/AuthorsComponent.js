@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import authorStyle from '../../asset/AuthorComponent.module.css';
+import { AuhtorDisplayingData } from '../../context/AuthorData';
 import ListItemComponent from '../common/ListItemComponent';
+import PaginateButton from '../PaginateBtn/PaginateButton';
 
 const AuthorsComponent = () => {
-    const [authors, setAuthors] = useState([]);
-    const [isLoading, setIsloading] = useState(true);
-
-    useEffect(() => {
-        setIsloading(true);
-        fetch('https://api.quotable.io/authors')
-            .then((res) => res.json())
-            .then((data) => {
-                setAuthors(data.results);
-                setIsloading(false);
-            })
-            .catch((err) => {
-                setIsloading(false);
-                console.log(err);
-            });
-    }, []);
-
+    const { authors, isLoading } = useContext(AuhtorDisplayingData);
     return (
         <div>
             <div>
-                <h4 className={authorStyle.author_Com_Title}>Author Profile</h4>
+                <h4 className={authorStyle.author_Com_Title}>
+                    Authors Profile
+                </h4>
             </div>
             <div>
                 {isLoading ? (
@@ -43,6 +31,7 @@ const AuthorsComponent = () => {
                     </div>
                 )}
             </div>
+            <PaginateButton />
         </div>
     );
 };

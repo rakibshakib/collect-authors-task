@@ -1,0 +1,15 @@
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(187, 187, 187);
+}
+.btnStyle {
+    display: flex;
+    align-items: center;
+}
+.countpage {
+    padding: 2px 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
