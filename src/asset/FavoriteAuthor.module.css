@@ -1,22 +1,32 @@
 .fabAuthor {
-    padding: 20px;
+  padding: 20px;
 }
 .favDontAddingTitle {
-    text-align: center;
-    font-size: 1rem;
-    margin: 10px auto;
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px auto;
 }
 .favAuthorTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 5px 0;
-    border-bottom: 1px solid rgb(194, 194, 194);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(194, 194, 194);
 }
 .favAuthorContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  margin: 20px 0;
+}
+.pageBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageBtn {
+  border: 1px solid rgba(31, 31, 255, 0.746);
+  background-color: white;
+  margin: 0 10px;
 }

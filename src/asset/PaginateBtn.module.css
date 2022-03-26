@@ -1,17 +1,26 @@
 .buttonContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid rgb(187, 187, 187);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
 }
 .btnStyle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  background: white;
 }
 .countpage {
-    padding: 2px 3px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid rgb(187, 187, 187);
+  padding: 2px 3px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 10px;
+}
+.btnIcon {
+  display: inline-block;
+  background: white;
+  color: rgba(31, 31, 255, 0.746) !important;
+  font-size: 1.3rem;
 }

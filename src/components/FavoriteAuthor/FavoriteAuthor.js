@@ -5,6 +5,17 @@ import ListItemComponent from '../common/ListItemComponent';
 
 const FavoriteAuthor = () => {
     const { favoriteAuthors } = useContext(AuthorContext);
+    const authorPerPage = 4;
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const indexOfLastAuthor = currentPage * authorPerPage;
+    const indexOfFirstAuthor = indexOfLastAuthor - authorPerPage;
+    const getCurrentPageAuthor = favoriteAuthors.slice(indexOfFirstAuthor, indexOfLastAuthor);
+
+    const pageNumber = [];
+    for (let i = 1; i < Math.ceil((favoriteAuthors.length+1) / authorPerPage); i++) {
+    pageNumber.push(i);
+    }
+    const paginateHandeler = (num) => {setCurrentPage(num)};
 
     return (
         <div className={favAuthorStyle.fabAuthor}>
@@ -19,7 +30,7 @@ const FavoriteAuthor = () => {
                 </div>
             ) : (
                 <div className={favAuthorStyle.favAuthorContainer}>
-                    {favoriteAuthors.map((author) => (
+                    {getCurrentPageAuthor.map((author) => (
                         <ListItemComponent
                             key={author._id}
                             author={author}
@@ -27,6 +38,16 @@ const FavoriteAuthor = () => {
                     ))}
                 </div>
             )}
+            <div className={favAuthorStyle.pageBtnContainer}>
+                <div>
+                {pageNumber.map((number) => (
+                    
+                        <button className={favAuthorStyle.pageBtn} onClick={() => paginateHandeler(number)} key={number}>
+                            {number}
+                        </button>
+                     ))}
+                </div>
+            </div>
         </div>
     );
 };

@@ -33,6 +33,7 @@ const AuthorsComponent = () => {
                     </div>
                 )}
             </div>
+            <hr/>
             <PaginateButton />
         </div>
     );

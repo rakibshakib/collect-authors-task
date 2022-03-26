@@ -16,5 +16,5 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   justify-items: center;
-  margin: 20px 0;
+  margin: 20px 10px;
 }

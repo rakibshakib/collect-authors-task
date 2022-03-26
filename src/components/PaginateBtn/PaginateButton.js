@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import paginate from '../../asset/PaginateBtn.module.css';
 import { AuhtorDisplayingData } from '../../context/AuthorData';
 const PaginateButton = () => {
@@ -7,12 +8,14 @@ const PaginateButton = () => {
     return (
         <div className={paginate.buttonContainer}>
             <div className={paginate.btnStyle}>
-                <button onClick={handlePrevoiusBtn}>
+                <button className={paginate.btn} onClick={handlePrevoiusBtn}>
                     {' '}
-                    &lt;&lt; &nbsp; Previous
+                    <GrCaretPrevious className={paginate.btnIcon} />&nbsp; 
                 </button>
-                <h4 className={paginate.countpage}>Page: {countPage} </h4>
-                <button onClick={handleNextBtn}>Next &nbsp; &gt; &gt;</button>
+                <h4 className={paginate.countpage}>Page: &nbsp; {countPage} </h4>
+                <button className={paginate.btn} onClick={handleNextBtn}>
+                    
+                     &nbsp; <GrCaretNext className={paginate.btnIcon} /></button>
             </div>
         </div>
     );

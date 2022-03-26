@@ -19,27 +19,23 @@ const ListItemComponent = ({ author}) => {
                     rel="noreferrer"
                     target="_blank"
                 >
-                    Visit Author
+                    Visit Author Profile (Link)
                 </a>
             </div>
             <div>
-                {!isExistinFavourite && (
-                    <button
-                        className={listStyle.addBtn}
-                        onClick={() => addToFaborite(author)}
-                    >
-                        Add favorite
-                    </button>
-                )}
                 {
-                    isExistinFavourite && <button
+                    !isExistinFavourite? <button
+                    className={listStyle.addBtn}
+                    onClick={() => addToFaborite(author)}
+                >
+                    Add favorite
+                </button> : <button
                     className={listStyle.removeBtn}
                     onClick={() => removeFromFaborite(author._id)}
                 >
                     Remove favorite
                 </button>
-                }
-                
+                } 
             </div>
         </div>
     );
