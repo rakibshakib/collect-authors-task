@@ -1,21 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import favAuthorStyle from '../../asset/FavoriteAuthor.module.css';
 import { AuthorContext } from '../../context/State';
 import ListItemComponent from '../common/ListItemComponent';
+import AddedAuthorPaginate from '../PaginateBtn/AddedAuthorPaginate';
 
 const FavoriteAuthor = () => {
     const { favoriteAuthors } = useContext(AuthorContext);
+    const [currentPage, setCurrentPage] = useState(1);
+
     const authorPerPage = 4;
-    const [currentPage, setCurrentPage] = React.useState(1);
+
     const indexOfLastAuthor = currentPage * authorPerPage;
     const indexOfFirstAuthor = indexOfLastAuthor - authorPerPage;
-    const getCurrentPageAuthor = favoriteAuthors.slice(indexOfFirstAuthor, indexOfLastAuthor);
-
-    const pageNumber = [];
-    for (let i = 1; i < Math.ceil((favoriteAuthors.length+1) / authorPerPage); i++) {
-    pageNumber.push(i);
-    }
-    const paginateHandeler = (num) => {setCurrentPage(num)};
+    const getCurrentDisplayingAuthor = favoriteAuthors.slice(
+        indexOfFirstAuthor,
+        indexOfLastAuthor
+    );
+    const paginateHandeler = (num) => {
+        setCurrentPage(num);
+    };
 
     return (
         <div className={favAuthorStyle.fabAuthor}>
@@ -30,23 +33,17 @@ const FavoriteAuthor = () => {
                 </div>
             ) : (
                 <div className={favAuthorStyle.favAuthorContainer}>
-                    {getCurrentPageAuthor.map((author) => (
-                        <ListItemComponent
-                            key={author._id}
-                            author={author}
-                        />
+                    {getCurrentDisplayingAuthor.map((author) => (
+                        <ListItemComponent key={author._id} author={author} />
                     ))}
                 </div>
             )}
             <div className={favAuthorStyle.pageBtnContainer}>
-                <div>
-                {pageNumber.map((number) => (
-                    
-                        <button className={favAuthorStyle.pageBtn} onClick={() => paginateHandeler(number)} key={number}>
-                            {number}
-                        </button>
-                     ))}
-                </div>
+                <AddedAuthorPaginate
+                    authorPerPage={authorPerPage}
+                    totalAuthor={favoriteAuthors.length + 1}
+                    paginateHandeler={paginateHandeler}
+                />
             </div>
         </div>
     );
