@@ -12,6 +12,7 @@ const Menu = () => {
                 <span className={menuStyle.authors}>Authors</span>
             </NavLink>
             <NavLink
+           
                 className={menuStyle.link}
                 to="/favorite-author"
             >

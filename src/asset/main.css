@@ -16,7 +16,7 @@
   padding: 5px 0;
 }
 .active {
-  border-bottom: 5px solid rgba(31, 31, 255, 0.746);
+  background-color: rgba(31, 31, 255, 0.746);
 }
 
 @media (max-width: 425px) {
