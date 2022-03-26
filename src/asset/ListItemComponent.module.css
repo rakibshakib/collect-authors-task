@@ -1,15 +1,15 @@
 .listContainer {
   padding: 10px 15px;
-  /* width: 320px; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .listDetails {
-  margin: 0 5px;
-  padding: 0 15px;
+  margin: 5px;
+  padding: 10px;
 }
 .author_name {
   font-size: 1.1rem;
@@ -40,10 +40,12 @@ button {
 .addBtn {
   background: rgba(0, 128, 0, 0.692);
   color: white;
+  font-size: 14px;
 }
 .removeBtn {
   background: rgba(31, 31, 255, 0.746);
   color: white;
+  font-size: 14px;
   /* margin-left: 5px; */
 }
 .addBtn:active,

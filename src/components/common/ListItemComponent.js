@@ -8,20 +8,6 @@ const ListItemComponent = ({ author}) => {
     
     return (
         <div className={listStyle.listContainer}>
-            <div className={listStyle.listDetails}>
-                <h4 className={listStyle.author_name}>{author?.name}</h4>
-                <h5 className={listStyle.author_bio}>
-                    <b>Biography: </b> {author?.bio}
-                </h5>
-                <a
-                    className={listStyle.author_link}
-                    href={author?.link}
-                    rel="noreferrer"
-                    target="_blank"
-                >
-                    Visit Author Profile (Link)
-                </a>
-            </div>
             <div>
                 {
                     !isExistinFavourite? <button
@@ -37,6 +23,21 @@ const ListItemComponent = ({ author}) => {
                 </button>
                 } 
             </div>
+            <div className={listStyle.listDetails}>
+                <h4 className={listStyle.author_name}>{author?.name}</h4>
+                <h5 className={listStyle.author_bio}>
+                    <b>Biography: </b> {author?.bio}
+                </h5>
+                <a
+                    className={listStyle.author_link}
+                    href={author?.link}
+                    rel="noreferrer"
+                    target="_blank"
+                >
+                    Visit Author Profile (Link)
+                </a>
+            </div>
+            
         </div>
     );
 };
