@@ -17,6 +17,7 @@
 }
 .active {
   background-color: rgba(31, 31, 255, 0.746);
+  color: white !important;
 }
 
 @media (max-width: 425px) {
