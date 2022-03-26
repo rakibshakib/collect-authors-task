@@ -18,3 +18,15 @@
   justify-items: center;
   margin: 20px 10px;
 }
+
+@media (max-width: 425px) {
+  .authorComponent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 425.11px) and (max-width: 768px) {
+  .authorComponent {
+    grid-template-columns: 1fr;
+  }
+}
